@@ -81,9 +81,14 @@ INSERT INTO 직원 VALUES(2, '팽수' ,2);
 DELETE FROM 직원;
 
 
+-- CREAT TABLE AS
+drop table emp_temp;
+create table emp_temp
+as
+select * from emp
+where 1!=1; --where절 조건에 만족하는 데이터가 없음. (특정 테이블의 열(테이블 헤더)만 복사)
 
-
-
+select * from emp_temp;
 
 
 

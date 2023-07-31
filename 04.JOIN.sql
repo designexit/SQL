@@ -56,10 +56,18 @@ FROM countries c CROSS JOIN regions r;
 
 
 
+-- STUDY
+SELECT d.department_name 부서명, d.manager_id 매니저번호, e.last_name || ' ' || e.first_name, e.phone_number 전화번호
+FROM departments d JOIN employees e
+ON d.manager_id =  e.employee_id;
 
+SELECT e.employee_id 직원번호, e.hire_date 고용일자, j.job_id 직종, j.job_title 직책
+from employees e join jobs j
+on e.job_id = j.job_id;
 
-
-
-
-
+SELECT j.job_title 직책, e.hire_date 입사년도평균급여
+from employees e join jobs j
+on e.job_id = j.job_id
+group by j.job_id
+where j.job_id = 'Sales Manager';
 

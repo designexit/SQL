@@ -61,7 +61,7 @@ FROM employees
 WHERE department_id = 90;
 -- 예제)
 --SELECT SYSDATE, hire_date, floor(months_between(sysdate, hire_date))
-SELECT SYSDATE, hire_date, trunc(months_between(sysdate, hire_date), 1)
+SELECT SYSDATE, hire_date, department_id, trunc(months_between(sysdate, hire_date), 1)
 FROM employees
 WHERE department_id = 100;
 -- 예제2)
